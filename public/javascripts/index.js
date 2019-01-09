@@ -1,7 +1,8 @@
 new Vue({
     el: '#nodepad',
     data: {
-        input: record.obter()
+        input: record.obter(),
+        displayPreview:true
     },
     computed: {
         compiledMarkdown: function () {
@@ -14,8 +15,12 @@ new Vue({
         }
     },
     methods: {
+        togglePreview:function () {
+            this.displayPreview=!this.displayPreview;
+        },
         update: _.debounce(function (e) {
-        this.input = e.target.value
+            this.input = e.target.value
         }, 300)
-    }
+        
+    },
     });

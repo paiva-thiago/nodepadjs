@@ -15,6 +15,6 @@ No momento, tela e armazenamento convencional (não criptografado) em variáveis
 - Armazenamento/Criptografia das informações em banco de dados;
 - Criação de contas de usuário.
 
-# ~~sugerimentos~~ Sugestões ou contato para apresentações, site da firma ou uma partida de tênis 
+## ~~sugerimentos~~ Sugestões ou contato para apresentações, site da firma ou uma partida de tênis 
 
 *Forka* aí ou contato@thiagopaiva.com

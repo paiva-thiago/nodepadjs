@@ -14,8 +14,11 @@ block content
         .topcoat-button-bar__item
           button.topcoat-button-bar__button--large
             i.material-icons account_circle
+        .topcoat-button-bar__item
+          button.topcoat-button-bar__button--large(@click='togglePreview')
+            i.material-icons pageview
     textarea.panel.topcoat-textarea--large.item(:value='input', @input='update', rows='30', cols='36')
-    #preview.item(v-html='compiledMarkdown')
+    #preview.item(v-html='compiledMarkdown',v-show='displayPreview')
       h1 oi
     footer.item
       span.copyleft ©
