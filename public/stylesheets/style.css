@@ -1,0 +1,121 @@
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Press+Start+2P|Source+Code+Pro');
+/* fontawesome */
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+  }
+body {
+    margin: 0;
+    padding: 0%;
+    background-color:#000;
+    color:#AEAEAE;
+    font-family: 'Montserrat', sans-serif;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-family: 'Press Start 2P', cursive;
+    color:#FFF;
+    font-size: 18px;
+    width: 9vw;
+    float: left;
+}
+#toolbar{
+    width: 50vw;
+    float: right;
+    text-align: right;    
+    justify-content: space-between;
+}
+#text {
+    width: 99vw;
+    height: 90vh;
+    background-image:url(../images/npbk.png);
+    line-height: 23px;
+    border:0px;
+    background-color: black;
+    color:rgb(195,195,195);
+    font-family: 'Source Code Pro', monospace;
+}
+#header{
+    top:0vw;
+    height:9vh;
+    width: 99vw;
+    border:0px;  
+    justify-content: space-between;
+}
+button{
+    border-radius: 5px;
+    cursor:pointer;
+	float:right;
+	height:40px;
+	width:40px;
+    border:none;
+    color:#EEE;
+    font-size: 22px;
+}
+button#save{
+    background: rgb(28, 184, 65);
+    
+}
+button#share{
+    background: rgb(66, 184, 221);
+}
+
+button#new{
+    background: rgb(255, 255, 255);
+    color: rgb(60,60,60);
+}
+
+input[type='text']{
+    padding:0px;
+    border:none;
+    background: rgb(72, 72, 72);
+    color:rgb(195,195,195);
+    border-bottom:3px solid rgb(195,195,195);
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+/*select{
+    background: rgb(72, 72, 72);
+    color:rgb(195,195,195);
+    border: none;
+    font-size: 18px;
+    border-bottom:3px solid rgb(195,195,195);        
+}*/
+
+.select-style {
+    padding:0px;
+    color:rgb(195,195,195);
+    border: none;
+    font-size: 18px;
+    border-bottom:3px solid rgb(195,195,195);            
+    width: 300px;
+    border-radius: 3px;
+    overflow: hidden;
+    background:  rgb(72, 72, 72) url(../images/down.png) no-repeat 97% 50%;
+}
+
+.select-style select option{
+    padding:0px;
+    background: rgb(72, 72, 72);
+    color:rgb(195,195,195);
+    font-size: 18px;
+}
+.select-style select {
+    padding:0px;
+    font-size: 18px;
+    color:rgb(195,195,195);
+    width: 107%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+}
+.select-style select:focus {
+    outline: none;
+}

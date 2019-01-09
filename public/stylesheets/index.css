@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Montserrat|Overpass+Mono|Major+Mono+Display");
+body{
+    background-color:#454646;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 14px;
+    color:rgb(200,200,200);
+}
+#nodepad {
+    display: grid;
+    grid-template-columns: auto auto;        
+    padding: 1px;
+    }
+.panel {
+    padding: 2.5px;
+    text-align: center;
+    }
+    header h1{
+        font-size:18px;
+        color:rgb(200,200,200);
+        width: 85%;
+        float: left;
+        text-align: left;
+        margin-left:50px;
+    }
+    #toolbar{
+        float: left;
+        width:0;
+        overflow:visible;
+        text-align: right;
+    }
+    button,i{
+        text-align: center;
+        box-sizing: border-box;
+        padding-top:5px;
+    }
+    .topcoat-textarea--large{
+        border: none;         
+        text-align: justify;
+        font-family: 'Overpass Mono',monospace;
+    }
+    .topcoat-textarea--large:focus{
+        box-shadow: 0 0 0 0;
+        border: 0;
+        background-color: #454646;
+    }
+    header,footer{
+        grid-column: 1 / 3;
+        background-color:#555;
+
+    }
+    #preview{
+        background: rgb(200,200,200);
+        color:#000;             
+        font-family: 'Montserrat', sans-serif;
+        display: block;
+    }
+    .item{
+        height: 100%;
+    }
+    .copyleft {
+        display:inline-block;
+        transform: rotate(180deg);
+    }
+    footer{
+        background:transparent;
+        color:rgb(200,200,200);
+        text-align: center;
+        font-weight: bolder;
+        font-size: 10px;
+    }
+    button:focus {
+      box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px rgb(200,200,200);
+      outline: 0;
+    }
