@@ -18,3 +18,7 @@ No momento, tela e armazenamento convencional (não criptografado) em variáveis
 ## ~~sugerimentos~~ Sugestões ou contato para apresentações, site da firma ou uma partida de tênis 
 
 *Forka* aí ou contato@thiagopaiva.com
+
+## IMPORTANTE
+
+Neste repositório não estão os módulos do node (veja que o diretório `node_modules` não está aí). Então, é importante chamar aquele `npm install` :)
