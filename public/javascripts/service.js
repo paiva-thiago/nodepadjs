@@ -1,3 +1,12 @@
+const text  = function(pTitulo,pData,pTexto){
+    return {
+        titulo:pTitulo,
+        data:pData,
+        texto:pTexto
+    };
+} 
+    
+
 const record = {
     salvar : function(txt){
         localStorage.setItem('texto',txt);
@@ -7,6 +16,5 @@ const record = {
             localStorage.setItem('texto','# olá mundo! \n\n Comece a escrever aqui');
         }
         return localStorage.getItem('texto');
-
     }
 }
