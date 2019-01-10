@@ -17,10 +17,22 @@ body{
     header h1{
         font-size:18px;
         color:rgb(200,200,200);
-        width: 83%;
+        width: 10%;
         float: left;
         text-align: left;
         margin-left:50px;
+    }
+    #searchbar{
+        float: left;
+        width:70%;
+        overflow: visible;        
+        text-align:center;
+    }
+    #searchbar input{
+        font-size:28px;
+        color:rgb(200,200,200);
+        font-family: 'Overpass Mono',monospace;
+        
     }
     #toolbar{
         float: left;

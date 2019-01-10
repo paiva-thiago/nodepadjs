@@ -1,14 +1,16 @@
+var page = record.corrente();
 new Vue({
     el: '#nodepad',
     data: {
-        input: record.obter(),
+        titulo: page.titulo,
+        texto: page.texto,
         displayPreview:true
     },
     computed: {
         compiledMarkdown: function () {
             var md       = window.markdownit();
-            var rendered = md.render(this.input); 
-            record.salvar(this.input);
+            var rendered = md.render(this.texto); 
+            record.salvar(record.corrente().id,this.titulo,this.texto);
             return rendered;
         }
     },
@@ -17,7 +19,10 @@ new Vue({
             this.displayPreview=!this.displayPreview;
         },
         update: _.debounce(function (e) {
-            this.input = e.target.value
+            this.texto = e.target.value
+        }, 300),
+        updateTitle: _.debounce(function (e) {
+            this.titulo = e.target.value
         }, 300)
         
     },

@@ -4,7 +4,9 @@ block content
   #nodepad
     header.panel.topcoat-button-bar
       h1 Nodepad
-      #toolbar
+      #searchbar
+        input.topcoat-text-input(:value='titulo', @input='updateTitle')
+      #toolbar        
         .topcoat-button-bar__item
           button.topcoat-button-bar__button--large
             i.material-icons insert_drive_file
@@ -20,7 +22,7 @@ block content
         .topcoat-button-bar__item
           button.topcoat-button-bar__button--large(@click='togglePreview')
             i.material-icons pageview
-    textarea.panel.topcoat-textarea--large.item(:value='input', @input='update', rows='30', cols='36')
+    textarea.panel.topcoat-textarea--large.item(:value='texto', @input='update', rows='30', cols='36')
     #preview.item(v-html='compiledMarkdown',v-show='displayPreview')
       h1 oi
     footer.item
