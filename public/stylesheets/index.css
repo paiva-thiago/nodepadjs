@@ -1,91 +1,180 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons|Montserrat|Overpass+Mono|Major+Mono+Display");
-body{
-    background-color:#454646;
+body {
+    background-color: #454646;
     font-family: 'Major Mono Display', monospace;
     font-size: 14px;
-    color:rgb(200,200,200);
+    color: rgb(200, 200, 200);
 }
+
 #nodepad {
     display: grid;
-    grid-template-columns: auto auto;        
+    grid-template-columns: auto auto;
     padding: 1px;
-    }
+}
+
 .panel {
     padding: 2.5px;
     text-align: center;
-    }
-    header h1{
-        font-size:18px;
-        color:rgb(200,200,200);
-        width: 10%;
-        float: left;
-        text-align: left;
-        margin-left:50px;
-    }
-    #searchbar{
-        float: left;
-        width:70%;
-        overflow: visible;        
-        text-align:center;
-    }
-    #searchbar input{
-        font-size:28px;
-        color:rgb(200,200,200);
-        font-family: 'Overpass Mono',monospace;
-        
-    }
-    #toolbar{
-        float: left;
-        width:0;
-        overflow:visible;
-        text-align: right;
-    }
-    button,i{
-        text-align: center;
-        box-sizing: border-box;
-        padding-top:5px;
-    }
-    .topcoat-textarea--large{
-        border: none;         
-        text-align: justify;
-        font-family: 'Overpass Mono',monospace;
-        resize: horizontal;
-        overflow: auto;
-    }
-    .topcoat-textarea--large:focus{
-        box-shadow: 0 0 0 0;
-        border: 0;
-        background-color: #454646;
-        
-    }
-    header,footer{
-        grid-column: 1 / 3;
-        background-color:#555;
+}
 
-    }
-    #preview{
-        background: rgb(200,200,200);
-        color:#000;             
-        font-family: 'Montserrat', sans-serif;
-        display: block;
-        resize: horizontal;
-        overflow: auto;
-    }
-    .item{
-        height: 100%;
-    }
-    .copyleft {
-        display:inline-block;
-        transform: rotate(180deg);
-    }
-    footer{
-        background:transparent;
-        color:rgb(200,200,200);
-        text-align: center;
-        font-weight: bolder;
-        font-size: 10px;
-    }
-    button:focus {
-      box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px rgb(200,200,200);
-      outline: 0;
-    }
+header h1 {
+    font-size: 18px;
+    color: rgb(200, 200, 200);
+    width: 10%;
+    float: left;
+    text-align: left;
+    margin-left: 50px;
+}
+
+#searchbar,
+#selectbar {
+    float: left;
+    width: 35%;
+    overflow: visible;
+    text-align: center;
+}
+
+#searchbar input {
+    font-size: 28px;
+    color: rgb(200, 200, 200);
+    font-family: 'Overpass Mono', monospace;    
+}
+#selectbar select{
+    font-size:14px;
+    width:50%;    
+    font-family: 'Overpass Mono', monospace;    
+}
+
+#toolbar {
+    float: left;
+    width: 0;
+    overflow: visible;
+    text-align: right;
+}
+
+button,
+i {
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 5px;
+}
+
+.topcoat-textarea--large {
+    border: none;
+    text-align: justify;
+    font-family: 'Overpass Mono', monospace;
+    resize: horizontal;
+    overflow: auto;
+}
+
+.topcoat-textarea--large:focus {
+    box-shadow: 0 0 0 0;
+    border: 0;
+    background-color: #454646;
+}
+
+header,
+footer {
+    grid-column: 1 / 3;
+    background-color: #555;
+}
+
+#preview {
+    background: rgb(200, 200, 200);
+    display: block;
+    resize: horizontal;
+    overflow: auto;
+}
+
+.item {
+    height: 100%;
+}
+
+.copyleft {
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+footer {
+    background: transparent;
+    color: rgb(200, 200, 200);
+    text-align: center;
+    font-weight: bolder;
+    font-size: 10px;
+}
+
+button:focus {
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.36), 0 0 0 2px rgb(200, 200, 200);
+    outline: 0;
+}
+
+/**********************/
+
+
+.topcoat-select {
+    margin: 0;
+    font: inherit;
+    background: 0 0;
+    outline: 0;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    position: relative;
+    display: inline-block
+}
+
+.topcoat-select:disabled {
+    opacity: .3;
+    cursor: default;
+    pointer-events: none
+}
+
+.topcoat-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+.topcoat-select::-ms-expand {
+    display: none
+}
+
+.topcoat-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    text-indent: 1px;
+    text-overflow: '';
+    padding: .25rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.313rem;
+    letter-spacing: 0;
+    color: hsla(180, 2%, 78%, 1);
+    text-shadow: 0 -1px hsla(0, 0%, 0%, .69);
+    vertical-align: top;
+    border-radius: 4px;
+    background-color: hsla(180, 1%, 35%, 1);
+    box-shadow: inset 0 1px hsla(0, 0%, 45%, 1);
+    border: 1px solid hsla(180, 1%, 20%, 1);
+    background-image: url(../images/dropdown.svg);
+    background-repeat: no-repeat;
+    background-position: center right;
+    min-width: 3.4rem
+}
+
+.topcoat-select:hover {
+    background-color: hsla(200, 2%, 39%, 1)
+}
+
+.topcoat-select:active {
+    background-color: hsla(210, 2%, 25%, 1);
+    box-shadow: inset 0 1px hsla(0, 0%, 0%, .05)
+}
+
+.topcoat-select:focus {
+    border: 1px solid hsla(227, 100%, 50%, 1);
+    box-shadow: 0 0 0 2px hsla(208, 82%, 69%, 1);
+    outline: 0
+}
