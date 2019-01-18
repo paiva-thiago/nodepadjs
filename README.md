@@ -10,13 +10,14 @@ Um editor markdown de armazenamento criptografado escrito em javascript.
 
 ### Em desenvolvimento
 
-No momento, tela e armazenamento convencional (não criptografado) em variáveis de sessão para a máquina local concluídos. O que falta no momento:
-
-- Criação de mais de um "arquivo" de texto;
-- Funcionalidade aos botões da barra de ferramentas;
-- Armazenamento/Criptografia das informações em banco de dados;
-- Criação de contas de usuário.
-- Outras *perfumarias* a mais
+Lista de *features*:
+- [x] Armazenamento de textos texto em sessão local na máquina
+- [x] Armazenamento de textos e títulos, também em sessão local na máquina
+- [ ] Criação de mais de um "arquivo" de texto;
+- [ ] Funcionalidade aos botões da barra de ferramentas;
+- [ ] Armazenamento/Criptografia das informações em banco de dados;
+- [ ] Criação de contas de usuário.
+- [ ] Outras *perfumarias* a mais
 
 ## IMPORTANTE
 
