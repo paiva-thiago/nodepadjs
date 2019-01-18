@@ -7,14 +7,11 @@ block content
       #searchbar
         input.topcoat-text-input(:value='titulo', @input='updateTitle')
       #selectbar
-        select.topcoat-select
-            option Texto 1
-            option Texto 2
-            option Texto 3
-            option Texto 4
+        select.topcoat-select(@change="selectText(this.value)")
+            option("v-for"="g in gravados", :value="g.id" ) {{ g.titulo }}
       #toolbar        
         .topcoat-button-bar__item
-          button.topcoat-button-bar__button--large
+          button.topcoat-button-bar__button--large(v-on:click='novoTexto')
             i.material-icons insert_drive_file
         .topcoat-button-bar__item
           button.topcoat-button-bar__button--large
