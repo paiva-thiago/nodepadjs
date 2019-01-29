@@ -13,7 +13,7 @@ const text  = function(pId,pTitulo,pTexto){
 
 const init = function(){
     var data = [];
-    var id   = new Date().getTime();
+    var id   = new Date().getTime().toString();
     var item = text(id,'Novo Texto','# olá mundo! \n\n Comece a escrever aqui! \n\n -- \n\n Nodepad 2019');
     data.push(item);
     localStorage.setItem(PARAM,JSON.stringify(data));
@@ -27,21 +27,20 @@ const record = {
         }
         return JSON.parse(localStorage.getItem(PARAM));
     },
-    porId: function(pId){
-        if(pId==undefined){
-            pId=new Date().getTime();
-        }
+    porId: function(pId){       
         var data = this.todos();
-        var item = data.filter(function(i){ return i.id==pId});
-        if((item==undefined)||(item[0]==undefined)){
-            console.error('Texto não encontrado!');
-            return undefined;
-        }else{
-            item=item[0];
+        var item = data[0];        
+        if((pId!=null)&&(pId!=undefined)){
+            idx = data.findIndex(function(i){ return i.id==pId});        
+            if(idx==-1){
+                console.error('Texto não encontrado!');
+                item = undefined;
+            }else{
+                localStorage.setItem(CURR_ID,data[idx]);
+                item = data[idx];
+            }
         }
-        localStorage.setItem(CURR_ID,pId);
-        return item;
-
+        return item;                    
     },
     corrente:function(){
         var id = localStorage.getItem(CURR_ID);
